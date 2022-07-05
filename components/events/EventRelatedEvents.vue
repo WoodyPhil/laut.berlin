@@ -2,28 +2,28 @@
 export default {
   data: () => {
     return {
-      relatedProject: {
-        relatedProjectsHeading: "Related Projects",
-        relatedProjects: [
+      relatedEvent: {
+        relatedEventsHeading: "Related Events",
+        relatedEvents: [
           {
             id: 1,
             title: "Mobile UI",
-            img: require("@/static/images/mobile-project-1.jpg"),
+            img: require("@/static/images/mobile-event-1.jpg"),
           },
           {
             id: 2,
             title: "Web Application",
-            img: require("@/static/images/web-project-1.jpg"),
+            img: require("@/static/images/web-event-1.jpg"),
           },
           {
             id: 3,
             title: "UI Design",
-            img: require("@/static/images/ui-project-2.jpg"),
+            img: require("@/static/images/ui-event-2.jpg"),
           },
           {
             id: 4,
             title: "Kabul Mobile App UI",
-            img: require("@/static/images/mobile-project-2.jpg"),
+            img: require("@/static/images/mobile-event-2.jpg"),
           },
         ],
       },
@@ -54,11 +54,11 @@ export default {
         text-left
       "
     >
-      {{ relatedProject.relatedProjectsHeading }}
+      {{ relatedEvent.relatedEventsHeading }}
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-4 gap-10">
-      <div v-for="item in relatedProject.relatedProjects" :key="item.id">
+      <div v-for="item in relatedEvent.relatedEvents" :key="item.id">
         <img
           :src="item.img"
           class="rounded-xl cursor-pointer"

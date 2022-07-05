@@ -1,14 +1,14 @@
 import { v4 as uuidv4 } from "uuid";
 
 export const state = () => ({
-  projectsHeading: "Projects Portfolio",
-  projectsDescription: "Some of the projects I have successfully completed",
-  projects: [
+  eventsHeading: "Events Portfolio",
+  eventsDescription: "Some of the events I have successfully completed",
+  events: [
     {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdb",
       title: "Google Health Platform",
       category: "Web Application",
-      img: "images/web-project-2.jpg",
+      img: "images/web-event-2.jpg",
       publishDate: "Nov 04, 2021",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -18,21 +18,21 @@ export const state = () => ({
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Share This",
-      projectImages: [
+      eventImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "Uber Event Management UI",
+          img: "../images/ui-event-1.jpg",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "Uber Event Management UI",
+          img: "../images/web-event-1.jpg",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "Uber Event Management UI",
+          img: "../images/web-event-2.jpg",
         },
       ],
       companyInfos: [
@@ -65,7 +65,7 @@ export const state = () => ({
         "TailwindCSS",
         "AdobeXD",
       ],
-      projectDetails: [
+      eventDetails: [
         {
           id: uuidv4(),
           details:
@@ -124,7 +124,7 @@ export const state = () => ({
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdc",
       title: "Phoenix Digital Agency",
       category: "Mobile Application",
-      img: "images/mobile-project-2.jpg",
+      img: "images/mobile-event-2.jpg",
       publishDate: "Nov 04, 2021",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -134,21 +134,21 @@ export const state = () => ({
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Share This",
-      projectImages: [
+      eventImages: [
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/mobile-project-1.jpg",
+          img: "../images/mobile-event-1.jpg",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/web-project-2.jpg",
+          img: "../images/web-event-2.jpg",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/mobile-project-2.jpg",
+          img: "../images/mobile-event-2.jpg",
         },
       ],
       companyInfos: [
@@ -181,7 +181,7 @@ export const state = () => ({
         "TailwindCSS",
         "AdobeXD",
       ],
-      projectDetails: [
+      eventDetails: [
         {
           id: uuidv4(),
           details:
@@ -238,9 +238,9 @@ export const state = () => ({
     },
     {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdy",
-      title: "Project Management UI",
+      title: "Event Management UI",
       category: "UI/UX Design",
-      img: "images/ui-project-1.jpg",
+      img: "images/ui-event-1.jpg",
       publishDate: "Nov 04, 2021",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -250,21 +250,21 @@ export const state = () => ({
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Share This",
-      projectImages: [
+      eventImages: [
         {
           id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/mobile-project-1.jpg",
+          title: "Event Management UI",
+          img: "../images/mobile-event-1.jpg",
         },
         {
           id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "Event Management UI",
+          img: "../images/web-event-2.jpg",
         },
         {
           id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/mobile-project-2.jpg",
+          title: "Event Management UI",
+          img: "../images/mobile-event-2.jpg",
         },
       ],
       companyInfos: [
@@ -297,7 +297,7 @@ export const state = () => ({
         "TailwindCSS",
         "AdobeXD",
       ],
-      projectDetails: [
+      eventDetails: [
         {
           id: uuidv4(),
           details:
@@ -356,7 +356,7 @@ export const state = () => ({
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8ccc99",
       title: "Cloud Storage Platform",
       category: "UI/UX Design",
-      img: "images/ui-project-2.jpg",
+      img: "images/ui-event-2.jpg",
       publishDate: "Nov 04, 2021",
       tag: "Web / Frontend",
       clientTitle: "About Client",
@@ -366,21 +366,21 @@ export const state = () => ({
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Share This",
-      projectImages: [
+      eventImages: [
         {
           id: uuidv4(),
           title: "Cloud Storage Platform",
-          img: "../images/web-project-1.jpg",
+          img: "../images/web-event-1.jpg",
         },
         {
           id: uuidv4(),
           title: "Cloud Storage Platform",
-          img: "../images/web-project-2.jpg",
+          img: "../images/web-event-2.jpg",
         },
         {
           id: uuidv4(),
           title: "Cloud Storage Platform",
-          img: "../images/mobile-project-2.jpg",
+          img: "../images/mobile-event-2.jpg",
         },
       ],
       companyInfos: [
@@ -413,7 +413,7 @@ export const state = () => ({
         "TailwindCSS",
         "AdobeXD",
       ],
-      projectDetails: [
+      eventDetails: [
         {
           id: uuidv4(),
           details:
@@ -472,7 +472,7 @@ export const state = () => ({
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdm",
       title: "Uber Social App",
       category: "Mobile Application",
-      img: "images/mobile-project-1.jpg",
+      img: "images/mobile-event-1.jpg",
       publishDate: "Nov 04, 2021",
       tag: "UI / Mobile",
       clientTitle: "About Client",
@@ -482,21 +482,21 @@ export const state = () => ({
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Share This",
-      projectImages: [
+      eventImages: [
         {
           id: uuidv4(),
           title: "Uber Social App",
-          img: "../images/web-project-1.jpg",
+          img: "../images/web-event-1.jpg",
         },
         {
           id: uuidv4(),
           title: "Uber Social App",
-          img: "../images/web-project-2.jpg",
+          img: "../images/web-event-2.jpg",
         },
         {
           id: uuidv4(),
           title: "Uber Social App",
-          img: "../images/mobile-project-2.jpg",
+          img: "../images/mobile-event-2.jpg",
         },
       ],
       companyInfos: [
@@ -529,7 +529,7 @@ export const state = () => ({
         "TailwindCSS",
         "AdobeXD",
       ],
-      projectDetails: [
+      eventDetails: [
         {
           id: uuidv4(),
           details:
@@ -588,7 +588,7 @@ export const state = () => ({
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccbb",
       title: "Apple Design System",
       category: "Web Application",
-      img: "images/web-project-1.jpg",
+      img: "images/web-event-1.jpg",
       publishDate: "Nov 04, 2021",
       tag: "UI / Mobile",
       clientTitle: "About Client",
@@ -598,21 +598,21 @@ export const state = () => ({
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Share This",
-      projectImages: [
+      eventImages: [
         {
           id: uuidv4(),
           title: "Apple Design System",
-          img: "../images/web-project-1.jpg",
+          img: "../images/web-event-1.jpg",
         },
         {
           id: uuidv4(),
           title: "Apple Design System",
-          img: "../images/web-project-2.jpg",
+          img: "../images/web-event-2.jpg",
         },
         {
           id: uuidv4(),
           title: "Apple Design System",
-          img: "../images/mobile-project-2.jpg",
+          img: "../images/mobile-event-2.jpg",
         },
       ],
       companyInfos: [
@@ -645,7 +645,7 @@ export const state = () => ({
         "TailwindCSS",
         "AdobeXD",
       ],
-      projectDetails: [
+      eventDetails: [
         {
           id: uuidv4(),
           details:
@@ -806,8 +806,8 @@ export const state = () => ({
 });
 
 export const getters = {
-  getProjectById: (state) => (id) => {
-    return state.projects.find((project) => project.id == id);
+  getEventById: (state) => (id) => {
+    return state.events.find((event) => event.id == id);
   },
 };
 

@@ -11,12 +11,12 @@ export default {
   <div class="container mx-auto">
     <AppBanner />
 
-    <ProjectsGrid />
+    <EventsGrid />
 
-    <!-- View more projects button -->
+    <!-- View more events button -->
     <div class="mt-5 sm:mt-14 flex justify-center">
       <NuxtLink
-        to="/projects"
+        to="/events"
         class="
           font-general-medium
           flex
@@ -33,9 +33,9 @@ export default {
           sm:text-xl
           duration-300
         "
-        aria-label="More Projects"
+        aria-label="More Events"
       >
-        <Button title="More Projects" />
+        <Button title="More Events" />
       </NuxtLink>
     </div>
   </div>

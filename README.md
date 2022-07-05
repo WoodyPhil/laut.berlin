@@ -16,11 +16,11 @@ A simple portfolio starter theme built with Nuxt.js and Tailwind CSS. This is th
 - Theme Switcher with Dark Mode
 - Vuex for state management
 - Reusable components
-- Projects filter by category
-- Projects search by title
+- Events filter by category
+- Events search by title
 - Vue transitions
 - Counter
-- Projects carousel
+- Events carousel
 - Smooth scroll
 - Dynamic forms
 - Back to top button
@@ -44,7 +44,7 @@ brew install node
 git clone https://github.com/realstoman/nuxtjs-tailwindcss-portfolio.git
 ```
 
-3. ##### Open the project folder:
+3. ##### Open the event folder:
 
 ```
 cd nuxtjs-tailwindcss-portfolio
@@ -80,7 +80,7 @@ yarn build
 yarn start
 ```
 
-##### Generate static project:
+##### Generate static event:
 
 ```
 yarn generate
@@ -89,7 +89,7 @@ yarn generate
 ## Notes
 
 - Always run `yarn install` after pulling new changes
-- I'll be constantly updating this repo as I'll be adding more sections to it, so please always check the projects section of this repo to see what tasks are under todo and in progress
+- I'll be constantly updating this repo as I'll be adding more sections to it, so please always check the events section of this repo to see what tasks are under todo and in progress
 - Coming Soon [I'll be doing a screencast](https://www.youtube.com/c/StomanStudio). Soon I'll be uploading a video to my YouTube channel where I'll be going through the process of creating this portoflio
 - Illustrations from [unDraw](https://undraw.co) and [Freepik](https://freepik.com)
 - Images from [Unsplash](https://unsplash.com)

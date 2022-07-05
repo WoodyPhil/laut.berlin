@@ -4,7 +4,7 @@ import { mapState } from "vuex";
 export default {
   data: () => {
     return {
-      projectName: "Nuxt.js & Tailwind CSS Portfolio",
+      eventName: "Nuxt.js & Tailwind CSS Portfolio",
       author: "Stoman",
     };
   },
@@ -33,7 +33,7 @@ export default {
           dark:hover:text-indigo-300
           duration-500
         "
-        >{{ projectName }}</a
+        >{{ eventName }}</a
       >
       . Developed by
       <a

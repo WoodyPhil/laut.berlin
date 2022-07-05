@@ -1,6 +1,6 @@
 <script>
 import feather from "feather-icons";
-import ProjectRelatedProjects from "../../components/projects/ProjectRelatedProjects.vue";
+import EventRelatedEvents from "../../components/events/EventRelatedEvents.vue";
 export default {
   scrollToTop: true,
   data: () => {
@@ -9,8 +9,8 @@ export default {
     };
   },
   computed: {
-    project() {
-      return this.$store.getters.getProjectById(this.$route.params.id);
+    event() {
+      return this.$store.getters.getEventById(this.$route.params.id);
     },
   },
   mounted() {
@@ -19,15 +19,15 @@ export default {
   updated() {
     feather.replace();
   },
-  components: { ProjectRelatedProjects },
+  components: { EventRelatedEvents },
 };
 </script>
 
 <template>
   <div class="container mx-auto">
-    <!-- Check if there are projects and then load -->
-    <div v-if="project">
-      <!-- Project heading and meta info -->
+    <!-- Check if there are events and then load -->
+    <div v-if="event">
+      <!-- Event heading and meta info -->
       <div>
         <p
           class="
@@ -42,7 +42,7 @@ export default {
             mb-7
           "
         >
-          {{ project.title }}
+          {{ event.title }}
         </p>
         <div class="flex">
           <div class="flex items-center mr-10">
@@ -58,7 +58,7 @@ export default {
                 text-primary-dark
                 dark:text-primary-light
               "
-              >{{ project.publishDate }}</span
+              >{{ event.publishDate }}</span
             >
           </div>
           <div class="flex items-center">
@@ -74,31 +74,31 @@ export default {
                 text-primary-dark
                 dark:text-primary-light
               "
-              >{{ project.tag }}</span
+              >{{ event.tag }}</span
             >
           </div>
         </div>
       </div>
 
-      <!-- Project gallery -->
+      <!-- Event gallery -->
       <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
         <div
           class="mb-10 sm:mb-0"
-          v-for="projectImage in project.projectImages"
-          :key="projectImage.id"
+          v-for="eventImage in event.eventImages"
+          :key="eventImage.id"
         >
           <img
-            :src="projectImage.img"
+            :src="eventImage.img"
             class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
           />
         </div>
       </div>
 
-      <!-- Project info -->
+      <!-- Event info -->
       <div class="block sm:flex gap-0 sm:gap-10 mt-14">
-        <!-- Single project left section details -->
+        <!-- Single event left section details -->
         <div class="w-full sm:w-1/3 text-left">
-          <!-- Single project client details -->
+          <!-- Single event client details -->
           <div class="mb-7">
             <p
               class="
@@ -108,11 +108,11 @@ export default {
                 mb-2
               "
             >
-              {{ project.clientTitle }}
+              {{ event.clientTitle }}
             </p>
             <ul class="leading-loose">
               <li
-                v-for="info in project.companyInfos"
+                v-for="info in event.companyInfos"
                 :key="info.id"
                 class="
                   font-general-regular
@@ -128,14 +128,14 @@ export default {
                       ? 'hover:underline cursor-pointer'
                       : ''
                   "
-                  aria-label="Project website and phone"
+                  aria-label="Event website and phone"
                   >{{ info.details }}</a
                 >
               </li>
             </ul>
           </div>
 
-          <!-- Single project objectives -->
+          <!-- Single event objectives -->
           <div class="mb-7">
             <p
               class="
@@ -145,7 +145,7 @@ export default {
                 mb-2
               "
             >
-              {{ project.objectivesTitle }}
+              {{ event.objectivesTitle }}
             </p>
             <p
               class="
@@ -154,11 +154,11 @@ export default {
                 dark:text-ternary-light
               "
             >
-              {{ project.objectivesDetails }}
+              {{ event.objectivesDetails }}
             </p>
           </div>
 
-          <!-- Single project technologies -->
+          <!-- Single event technologies -->
           <div class="mb-7">
             <p
               class="
@@ -168,7 +168,7 @@ export default {
                 mb-2
               "
             >
-              {{ project.techTitle }}
+              {{ event.techTitle }}
             </p>
             <p
               class="
@@ -177,11 +177,11 @@ export default {
                 dark:text-ternary-light
               "
             >
-              {{ project.technologies.join(", ") }}
+              {{ event.technologies.join(", ") }}
             </p>
           </div>
 
-          <!-- Single project social sharing -->
+          <!-- Single event social sharing -->
           <div>
             <p
               class="
@@ -191,15 +191,15 @@ export default {
                 mb-2
               "
             >
-              {{ project.socialTitle }}
+              {{ event.socialTitle }}
             </p>
             <div class="flex items-center gap-3 mt-5">
               <a
-                v-for="social in project.socialSharings"
+                v-for="social in event.socialSharings"
                 :key="social.id"
                 :href="social.url"
                 target="__blank"
-                aria-label="Share Project"
+                aria-label="Share Event"
                 class="
                   bg-ternary-light
                   dark:bg-ternary-dark
@@ -220,7 +220,7 @@ export default {
           </div>
         </div>
 
-        <!-- Single project right section details -->
+        <!-- Single event right section details -->
         <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
           <p
             class="
@@ -232,11 +232,11 @@ export default {
               mb-7
             "
           >
-            {{ project.detailsTitle }}
+            {{ event.detailsTitle }}
           </p>
           <p
-            v-for="projectDetail in project.projectDetails"
-            :key="projectDetail.id"
+            v-for="eventDetail in event.eventDetails"
+            :key="eventDetail.id"
             class="
               font-general-regular
               mb-5
@@ -244,18 +244,18 @@ export default {
               dark:text-ternary-light
             "
           >
-            {{ projectDetail.details }}
+            {{ eventDetail.details }}
           </p>
         </div>
       </div>
 
-      <!-- Project related projects -->
-      <ProjectRelatedProjects />
+      <!-- Event related events -->
+      <EventRelatedEvents />
     </div>
 
-    <!-- Load not found components if no project found -->
+    <!-- Load not found components if no event found -->
     <div v-else class="font-general-medium container mx-auto text-center">
-      <h1>No projects yet</h1>
+      <h1>No events yet</h1>
     </div>
   </div>
 </template>

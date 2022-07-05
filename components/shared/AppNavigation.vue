@@ -23,7 +23,7 @@ export default {
     "
   >
     <NuxtLink
-      to="/projects"
+      to="/events"
       class="
         block
         text-left text-lg text-primary-dark
@@ -34,8 +34,8 @@ export default {
         mb-2
         sm:py-2
       "
-      aria-label="Projects"
-      >Projects</NuxtLink
+      aria-label="Events"
+      >Events</NuxtLink
     >
     <NuxtLink
       to="/about"

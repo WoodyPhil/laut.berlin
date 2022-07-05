@@ -5,32 +5,32 @@ import feather from "feather-icons";
 export default {
   data: () => {
     return {
-      selectedProject: "",
-      searchProject: "",
+      selectedEvent: "",
+      searchEvent: "",
     };
   },
   computed: {
-    ...mapState(["projectsHeading", "projectsDescription", "projects"]),
-    filteredProjects() {
-      if (this.selectedProject) {
-        return this.filterProjectsByCategory();
-      } else if (this.searchProject) {
-        return this.filterProjectsBySearch();
+    ...mapState(["eventsHeading", "eventsDescription", "events"]),
+    filteredEvents() {
+      if (this.selectedEvent) {
+        return this.filterEventsByCategory();
+      } else if (this.searchEvent) {
+        return this.filterEventsBySearch();
       }
-      return this.projects;
+      return this.events;
     },
   },
   methods: {
-    filterProjectsByCategory() {
-      return this.projects.filter((item) => {
+    filterEventsByCategory() {
+      return this.events.filter((item) => {
         let category =
           item.category.charAt(0).toUpperCase() + item.category.slice(1);
-        return category.includes(this.selectedProject);
+        return category.includes(this.selectedEvent);
       });
     },
-    filterProjectsBySearch() {
-      let project = new RegExp(this.searchProject, "i");
-      return this.projects.filter((el) => el.title.match(project));
+    filterEventsBySearch() {
+      let event = new RegExp(this.searchEvent, "i");
+      return this.events.filter((el) => el.title.match(event));
     },
   },
   mounted() {
@@ -41,7 +41,7 @@ export default {
 
 <template>
   <div class="pt-10 sm:pt-20 md:pt-24">
-    <!-- Projects grid header -->
+    <!-- Events grid header -->
     <div class="text-center">
       <p
         class="
@@ -54,15 +54,15 @@ export default {
           dark:text-ternary-light
         "
       >
-        {{ projectsHeading }}
+        {{ eventsHeading }}
       </p>
       <!-- Note: This description is commented out, but if you want to see it, just uncomment this -->
       <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
-        {{ projectsDescription }}
+        {{ eventsDescription }}
       </p> -->
     </div>
 
-    <!-- Filter and search projects -->
+    <!-- Filter and search events -->
     <div class="mt-8 sm:mt-10">
       <h3
         class="
@@ -75,7 +75,7 @@ export default {
           mb-4
         "
       >
-        Search projects by title or filter by category
+        Search events by title or filter by category
       </h3>
       <div
         class="
@@ -106,7 +106,7 @@ export default {
             ></i>
           </span>
           <input
-            v-model="searchProject"
+            v-model="searchEvent"
             class="
               font-general-medium
               pl-3
@@ -127,19 +127,19 @@ export default {
             name="name"
             type="search"
             required=""
-            placeholder="Search Projects"
+            placeholder="Search Events"
             aria-label="Name"
           />
         </div>
-        <ProjectsFilter @change="selectedProject = $event" />
+        <EventsFilter @change="selectedEvent = $event" />
       </div>
     </div>
 
-    <!-- Projects grid -->
+    <!-- Events grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
       <div
-        v-for="project in filteredProjects"
-        :key="project.id"
+        v-for="event in filteredEvents"
+        :key="event.id"
         class="
           rounded-xl
           shadow-lg
@@ -150,13 +150,13 @@ export default {
           bg-secondary-light
           dark:bg-ternary-dark
         "
-        aria-label="Single Project"
+        aria-label="Single Event"
       >
-        <NuxtLink :to="`/projects/${project.id}`">
+        <NuxtLink :to="`/events/${event.id}`">
           <div>
             <img
-              :src="project.img"
-              :alt="project.title"
+              :src="event.img"
+              :alt="event.title"
               class="rounded-t-xl border-none"
             />
           </div>
@@ -170,7 +170,7 @@ export default {
                 mb-2
               "
             >
-              {{ project.title }}
+              {{ event.title }}
             </p>
             <span
               class="
@@ -178,7 +178,7 @@ export default {
                 text-lg text-ternary-dark
                 dark:text-ternary-light
               "
-              >{{ project.category }}</span
+              >{{ event.category }}</span
             >
           </div>
         </NuxtLink>

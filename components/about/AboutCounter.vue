@@ -76,7 +76,7 @@ export default {
         >
       </div>
 
-      <!-- Projects completed counter -->
+      <!-- Events completed counter -->
       <div class="mb-20 sm:mb-0">
         <span
           class="
@@ -90,7 +90,7 @@ export default {
           >77</span
         >
         <span class="block text-md text-ternary-dark dark:text-ternary-light"
-          >Projects completed</span
+          >Events completed</span
         >
       </div>
     </div>
